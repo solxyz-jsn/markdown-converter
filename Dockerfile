@@ -1,8 +1,8 @@
 # Dockerfile for publishing
 # ARG VARIANT="14-buster"
-FROM node:14.16.1-buster
+FROM node:22-trixie-slim
 
-RUN apt-get update && apt-get install zip
+RUN apt-get update && apt-get install -y zip
 
 COPY ./ /app
 WORKDIR /app
